@@ -217,8 +217,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="product-icon">📦</div>
                         <h3>Pack para emprendedores</h3>
                         <p>Ventas + Gastos + Clientes + Cobranzas para comenzar a organizar tu negocio</p>
-                       <a href="#" class="button-secondary" data-bs-toggle="modal" data-bs-target="#modalPlanilla">Ver video</a>
-                        
+                       <a href="#" class="button-secondary" data-bs-toggle="modal" data-bs-target="#modalPlanilla" data-type="video" data-src="https://player.vimeo.com/video/1218790363?autopause=0&autoplay=1">Ver video</a>
                     </div>
                 </div>
             </div>
@@ -356,6 +355,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const modalPlanilla = document.getElementById('modalPlanilla');
+    const modalImage = document.getElementById('modalImage');
+    const modalVideoContainer = document.getElementById('modalVideoContainer');
+    const modalIframe = document.getElementById('modalIframe');
+
+    if (modalPlanilla) {
+        modalPlanilla.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            
+            // Leemos data-type, data-src o data-img
+            const type = button.getAttribute('data-type');
+            const src = button.getAttribute('data-src');
+            const imgSrc = button.getAttribute('data-img');
+
+            // 1. Caso: Es una imagen (si tiene data-img o data-type="image")
+            if (imgSrc || type === 'image') {
+                modalVideoContainer.classList.add('d-none');
+                modalIframe.src = ''; // Limpiar iframe
+
+                modalImage.src = imgSrc || src;
+                modalImage.classList.remove('d-none');
+            } 
+            // 2. Caso: Es un video (si tiene data-type="video")
+            else if (type === 'video') {
+                modalImage.classList.add('d-none');
+                modalImage.src = ''; // Limpiar imagen
+
+                modalIframe.src = src;
+                modalVideoContainer.classList.remove('d-none');
+            }
+        });
+
+        // Limpiar contenido al cerrar el modal (para detener reproducción de audio)
+        modalPlanilla.addEventListener('hidden.bs.modal', function () {
+            modalIframe.src = '';
+            modalImage.src = '';
+            modalVideoContainer.classList.add('d-none');
+            modalImage.classList.add('d-none');
+        });
+    }
+});
+</script>
+<!--
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const modalPlanilla = document.getElementById('modalPlanilla');
@@ -371,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-</script>
+</script>-->
 <script>
 function cargarVideo(rutaVideo) {
     const contenedor = document.getElementById('contenidoModal');
@@ -384,6 +429,7 @@ function cargarVideo(rutaVideo) {
 }
 </script>
 
+<!-- mODAL1 -->
 <div class="modal fade" id="modalPlanilla" tabindex="-1" aria-labelledby="modalPlanillaLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content bg-dark text-white border-secondary">
@@ -407,7 +453,7 @@ function cargarVideo(rutaVideo) {
     </div>
 </div>
 
-
+<!--modal2-->
 <div class="modal fade" id="modalLead" tabindex="-1" aria-labelledby="modalLeadLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content bg-dark text-white border-secondary">
