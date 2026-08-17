@@ -1,0 +1,479 @@
+/* =========================================================
+   CONFIGURACIÓN GENERAL Y VARIABLES (Knight Template)
+   Help: https://bootstrapmade.com/color-system/
+========================================================= */
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Montserrat", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+  
+  --background-color: #ffffff;
+  --default-color: #555555;
+  --heading-color: #151515;
+  --accent-color: #7cc576;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  
+  --nav-color: rgba(255, 255, 255, 0.605);
+  --nav-hover-color: #7cc576;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #555555;
+  --nav-dropdown-hover-color: #7cc576;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 90px 0;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  overflow: clip;
+}
+
+/* =========================================================
+   GLOBAL HEADER
+========================================================= */
+.header {
+  --background-color: rgba(0, 0, 0, 0);
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+.header .logo img {
+  max-height: 36px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .header-social-links a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  padding-left: 6px;
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.header .header-social-links a:hover {
+  color: var(--accent-color);
+}
+
+/* =========================================================
+   NAVBAR (Desktop)
+========================================================= */
+@media (min-width: 1200px) {
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu li:hover > a,
+  .navmenu .active {
+    color: var(--nav-hover-color);
+  }
+}
+
+/* =========================================================
+   SECTIONS & HEADINGS
+========================================================= */
+.section-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 50px;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #1976d2;
+  margin-bottom: 10px;
+}
+
+.section-heading h2,
+.about-text h2,
+.contact-box h2 {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 15px;
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+}
+
+.section-heading p {
+  color: #607d8b;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../img/hero-bg.png') center/cover no-repeat;
+}
+
+.hero .hero-logo {
+  max-width: 180px;
+  width: 75%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.hero p {
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--heading-color);
+  margin-top: 10px;
+}
+
+/* =========================================================
+   SOBRE MÍ
+========================================================= */
+.about {
+  background-color: #f8fafc;
+}
+
+.highlight-text {
+  padding-left: 18px;
+  border-left: 4px solid #1976d2;
+  font-weight: 600;
+}
+
+/* =========================================================
+   SERVICES & CARDS
+========================================================= */
+.services {
+  background-color: #ffffff;
+}
+
+.card {
+  background-color: var(--surface-color);
+  border: 1px solid #e5e9ed;
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon,
+.product-icon,
+.resource-icon {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+  display: block;
+
+ 
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  font-family: var(--heading-font);
+  text-align: center;
+}
+
+.card p {
+  color: #607d8b;
+  margin-bottom: 12px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #1976d2;
+}
+
+/* =========================================================
+   PRODUCTS / PLANILLAS
+========================================================= */
+.products {
+  background-color: #f8fafc;
+}
+
+.product-card.featured {
+  border: 2px solid #1976d2;
+}
+
+.featured-label {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #1976d2;
+  color: white;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 20px 0;
+  color: var(--heading-color);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 7px;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.8s ease;
+  text-align: center;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.button-primary {
+  background-color: #090cc9;
+  color: white;
+}
+
+.button-secondary {
+  background-color: #e8f1fb;
+  color: #061a74;
+}
+
+/* =========================================================
+   RESOURCES
+========================================================= */
+.resources {
+  background-color: #ffffff;
+}
+
+.resource-card {
+  border: 1px solid #e5e9ed;
+  border-radius: 12px;
+  padding: 30px;
+  background-color: white;
+}
+
+.coming-soon {
+  display: inline-block;
+  padding: 7px 12px;
+  background-color: #eef2f5;
+  color: #607d8b;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+.contact {
+  background-color: #f8fafc;
+}
+
+.contact-box {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 60px 30px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+}
+
+.whatsapp-button {
+  margin-top: 20px;
+  background-color: #25d366;
+  color: white;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.footer {
+  background-color: #263238;
+  color: white;
+  font-size: 14px;
+  position: relative;
+}
+
+.footer-content {
+  padding: 55px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+}
+
+.footer-brand p,
+.footer-contact p {
+  color: #cfd8dc;
+  margin-bottom: 7px;
+}
+
+.footer h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer-social a {
+  color: #cfd8dc;
+}
+
+.footer-social a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px;
+  color: #b0bec5;
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+@media (max-width: 900px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .section {
+    padding: 65px 0;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* Clase para secciones con fondo oscuro */
+.dark-background {
+  background-color: #263238; /* Mismo color de tu footer/encabezado */
+  color: #ffffff;
+}
+
+/* Asegurar que el texto sea blanco dentro de secciones oscuras */
+.dark-background h2, 
+.dark-background p {
+  color: #ffffff !important;
+}
+
+/* Opcional: ajustar el color de la etiqueta (el "SERVICIOS" de arriba) para que se vea bien */
+.dark-background .section-label {
+  color: #7cc576; /* O el color acento que prefieras */
+}
+
+/* Fuerza absoluta para centrar cualquier icono y título dentro de tarjetas o recursos */
+.card div[class*="icon"],
+.card [class*="-icon"],
+.resource-card [class*="-icon"],
+.product-card [class*="-icon"] {
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Si quieres centrar también el título de la tarjeta junto con el icono */
+.card h3,
+.resource-card h3 {
+  text-align: center !important;
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Consultoría</title>
+    <meta name="description" content="Herramientas de Excel y soluciones de gestión para emprendedores y pequeños negocios.[cite: 11]">
+    <meta name="keywords" content="Excel, gestión, emprendimientos, pequeños negocios, datos, administración[cite: 11]">
+
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/aos/aos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+        <a href="#hero" class="logo d-flex align-items-center me-auto">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Data Consultoría" style="max-height: 100px;">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#planillas">Planillas</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="header-social-links d-none d-xl-flex">
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+
+    <!-- HERO -->
+    <section id="hero" class="hero section dark-background">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Data Consultoría" class="img-fluid mb-4 hero-logo">
+                    <h2>Tu negocio crece.<br>Tu forma de controlarlo también.</h2>
+                    <p>Herramientas de Excel y soluciones de gestión para emprendedores y pequeños negocios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="section about">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-5 text-center">
+                    <img src="{{ url_for('static', filename='img/fotoyo.png') }}" alt="Danny Ramirez" class="img-fluid rounded-4 shadow" style="max-width: 350px;">
+                </div>
+                <div class="col-lg-7 about-text">
+                    <span class="section-label">SOBRE MÍ</span>
+                    <h2>Hola, soy Danny</h2>
+                    <p>Soy profesional en Administración y desde hace varios años trabajo con información, organización y análisis de datos.</p>
+                    <p>A lo largo de mi experiencia descubrí algo que se repite constantemente: muchos pequeños negocios tienen información valiosa, pero no siempre cuentan con una forma sencilla de organizarla y utilizarla.</p>
+                    <p>Aquí encontrarás herramientas prácticas de Excel, recursos gratuitos y soluciones adaptadas a las necesidades de emprendedores y pequeños negocios.</p>
+                    <p class="highlight-text">Mi objetivo es ayudarte a tener más control sobre la información de tu negocio</p>
+                    <p><strong>Bienvenido. Espero que encuentres aquí algo que realmente te sea útil.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+  <section id="servicios" class="section services dark-background">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-label">SERVICIOS</span>
+            <h2>¿En qué puedo ayudarte?</h2>
+            <p>Soluciones prácticas para organizar y controlar mejor la información de tu negocio.</p>
+        </div>
+    </section>
+
+            <div class="row gy-4">
+                <!-- SERVICIO 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-icon">📊</div>
+                        <h3>Organización de Excel</h3>
+                        <p>¿Tienes un Excel que comenzó siendo sencillo y terminó lleno de hojas, datos y fórmulas?</p>
+                        <p>Podemos organizarlo y mejorarlo para que sea más fácil de utilizar.</p>
+                        <a href="#contacto" class="card-link">Quiero organizar mi Excel </a>
+                    </div>
+                </div>
+                <!-- SERVICIO 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-icon">⚙️</div>
+                        <h3>Excel personalizado</h3>
+                        <p>¿No encuentras una planilla que se adapte exactamente a lo que necesitas?</p>
+                        <p>Creamos una herramienta de Excel adaptada a tu negocio.</p>
+                        <a href="#contacto" class="card-link">Quiero mi Excel </a>
+                    </div>
+                </div>
+                <!-- SERVICIO 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-icon">📈</div>
+                        <h3>Dashboards y reportes</h3>
+                        <p>Convierte tus datos en información que puedas consultar y entender rápidamente.</p>
+                        <p>Creamos reportes y dashboards para visualizar los principales indicadores de tu negocio.</p>
+                        <a href="#contacto" class="card-link">Quiero saber más </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANILLAS -->
+    <section id="planillas" class="section products dark-background">
+    <div class="container">
+        <div class="section-heading text-center">
+            <span class="section-label" style="color: #ffffff;">PLANILLAS EXCEL</span>
+            <h2 style="color: #ffffff;">Herramientas listas para usar</h2>
+            <p style="color: #cfd8dc;">Soluciones sencillas para organizar la información de tu negocio sin sistemas complicados.</p>
+        </div>
+        </section>
+            <div class="row gy-4">
+                <!-- VENTAS -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="product-icon">📊</div>
+                        <h3>Control de ventas</h3>
+                        <p>Registra tus ventas y consulta fácilmente tus resultados.</p>
+                        <div class="price">$10.000</div>
+                        <a href="#" class=" button-secondary" data-bs-toggle="modal" data-bs-target="#modalPlanilla" data-img="{{ url_for('static', filename='img/Control.png') }}">Ver planilla</a>
+                    </div>
+                </div>
+                <!-- GASTOS -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="product-icon">💰</div>
+                        <h3>Control de gastos</h3>
+                        <p>Organiza tus gastos y conoce cuánto estás gastando en tu negocio.</p>
+                        <div class="price">$10.000</div>
+                        <a href="#" class=" button-secondary" data-bs-toggle="modal" data-bs-target="#modalPlanilla" data-img="{{ url_for('static', filename='img/gastos.png') }}">Ver planilla</a>
+                    </div>
+                </div>
+                <!-- CLIENTES -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="product-icon">👥</div>
+                        <h3>Control de clientes</h3>
+                        <p>Mantén organizada la información de tus clientes.</p>
+                        <div class="price">$10.000</div>
+                        <a href="#" class=" button-secondary" data-bs-toggle="modal" data-bs-target="#modalPlanilla" data-img="{{ url_for('static', filename='img/clientes.png') }}">Ver planilla</a>
+                    </div>
+                </div>
+                <!-- COBRANZAS -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="product-icon">💳</div>
+                        <h3>Control de cobranzas</h3>
+                        <p>Lleva un registro sencillo de lo que tus clientes tienen pendiente de pagar.</p>
+                        <div class="price">$10.000</div>
+                        <a href="#" class=" button-secondary" data-bs-toggle="modal" data-bs-target="#modalPlanilla" data-img="{{ url_for('static', filename='img/cobranzas.png') }}">Ver planilla</a>
+                    </div>
+                </div>
+                <!-- DASHBOARD -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card h-100">
+                        <div class="product-icon">📈</div>
+                        <h3>Dashboard</h3>
+                        <p>Visualiza los principales indicadores de tu negocio en un solo lugar</p>
+                        <p>Completamente personalizado</p>
+                        <a href="#contacto" class="button button-secondary">Consultar </a>
+                    </div>
+                </div>
+                <!-- PACK -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card featured h-100">
+                        <span class="featured-label">RECOMENDADO</span>
+                        <div class="product-icon">📦</div>
+                        <h3>Pack para emprendedores</h3>
+                        <p>Ventas + Gastos + Clientes + Cobranzas para comenzar a organizar tu negocio</p>
+                       <a href="#" class="button-secondary" data-bs-toggle="modal" data-bs-target="#modalPlanilla">Ver video</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECURSOS GRATUITOS -->
+    <section id="recursos"  class="section products dark-background">
+           <div class="container">
+        <div class="section-heading text-center">
+
+                <span class="section-label" style="color: #ffffff;">RECURSOS GRATUITOS</span>
+                <h2 style="color: #ffffff;">Queremos ayudarte antes de venderte algo</h2>
+                <p style="color: #cfd8dc;">Hemos preparado recursos gratuitos para ayudarte a organizar mejor tu negocio</p>
+            </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="row gy-4">
+                <!-- RECURSO 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="resource-card h-100">
+                        <div class="resource-icon">📋</div>
+                        <h3>¿Qué tan organizado está tu negocio?</h3>
+                        <p>Un checklist rápido para descubrir qué aspectos básicos de tu negocio tienes organizados y cuáles podrías mejorar</p>
+                        <a  class=" button-primary" href="{{ url_for('descargar', filename='Organizado.pdf') }}">Descargar gratis</a>
+                    </div>
+                </div>
+                <!-- RECURSO 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="resource-card h-100">
+                        <div class="resource-icon">🏪</div>
+                        <h3>¿Todo listo para abrir tu negocio?</h3>
+                        <p>Un checklist sencillo para revisar antes de comenzar tu jornada</p>
+                         <a  class=" button-primary" href="{{ url_for('descargar', filename='Todo_listo.pdf') }}">Descargar gratis</a>
+                    </div>
+                </div>
+                <!-- RECURSO 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="resource-card h-100">
+                        <div class="resource-icon">📘</div>
+                        <h3>10 errores al manejar los números</h3>
+                        <p>Una mini guía para identificar errores frecuentes al manejar los números de un pequeño negocio.</p>
+                       
+                         <a  class=" button-primary" href="{{ url_for('descargar', filename='Errores.pdf') }}">Descargar Gratis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section products dark-background">
+        <div class="container">
+            <div class="contact-box text-center">
+                <span class="section-label" style="color: #ffffff;">CONTACTO</span>
+                <h2 style="color: #ffffff;">¿Tienes una duda?</h2>
+                <div></div>
+            </section>
+
+             <div class="row gy-4 justify-content-center">
+    <div class="col-lg-10 col-md-12 mx-auto">
+                <div class="resource-card h-100 text-center p-4">                     
+                <p>¿No sabes qué planilla necesitas?<br>¿Tienes un Excel que quieres mejorar?<br>¿Necesitas algo personalizado?</p>
+                <p>Escríbeme directamente por WhatsApp.</p>
+                <a class="button whatsapp-button" href="https://wa.me/+5491134045324" target="_blank" rel="noopener noreferrer"><img src="{{ url_for('static', filename='img/whatsapp.png') }}"></a>
+            </div>
+</div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer id="footer" class="footer dark-background py-5">
+    <div class="container">
+        <div class="row gy-4 align-items-center">
+            
+            <!-- Columna Izquierda: Logo, descripción y datos de contacto -->
+            <div class="col-lg-6">
+                <div class="footer-brand d-flex align-items-center mb-3">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Data Consultoría" style="max-height: 50px;" class="me-3">
+                    <span class="sitename fs-4"><strong>Data Consultoría</strong></span>
+                </div>
+                <p class="text-muted mb-2">Herramientas de Excel y soluciones de gestión.</p>
+                <p class="mb-1"><strong>Teléfono:</strong> <span>+5491134045324</span></p>
+                <p class="mb-0"><strong>Email:</strong> <span>dataconeccion@gmail.com</span></p>
+            </div>
+
+            <!-- Columna Derecha: Navegación y Redes Sociales -->
+            <div class="col-lg-6 text-lg-end">
+                <h4 class="text-white mb-3">Navegación</h4>
+                <ul class="list-unstyled d-flex justify-content-lg-end gap-4 mb-4 flex-wrap">
+                    <li><a href="#hero" class="text-decoration-none">Inicio</a></li>
+                    <li><a href="#sobre-mi" class="text-decoration-none">Sobre mí</a></li>
+                    <li><a href="#servicios" class="text-decoration-none">Servicios</a></li>
+                    <li><a href="#planillas" class="text-decoration-none">Planillas</a></li>
+                    <li><a href="#recursos" class="text-decoration-none">Recursos</a></li>
+                </ul>
+
+                <h4 class="text-white mb-2">Seguinos</h4>
+                <div class="social-links d-flex justify-content-lg-end gap-3">
+                    <a href="#" class="fs-5"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="fs-5"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Línea inferior de Copyright -->
+        <div class="copyright text-center mt-5 pt-3 border-top border-secondary">
+            <p class="mb-0">© 2026 <strong class="px-1 sitename">Data Consultoría</strong> Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- VENDOR JS -->
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const modalPlanilla = document.getElementById('modalPlanilla');
+    if (modalPlanilla) {
+        modalPlanilla.addEventListener('show.bs.modal', function (event) {
+            // Botón que activó el modal
+            const button = event.relatedTarget;
+            // Extraer la ruta de la imagen del atributo data-img
+            const imageUrl = button.getAttribute('data-img');
+            // Seleccionar la etiqueta img dentro del modal y cambiar su src
+            const modalImage = modalPlanilla.querySelector('#imagenModal');
+            modalImage.src = imageUrl;
+        });
+    }
+});
+</script>
+<script>
+function cargarVideo(rutaVideo) {
+    const contenedor = document.getElementById('contenidoModal');
+    contenedor.innerHTML = `
+        <video width="100%" controls autoplay class="rounded">
+            <source src="${rutaVideo}" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    `;
+}
+</script>
+
+<div class="modal fade" id="modalPlanilla" tabindex="-1" aria-labelledby="modalPlanillaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="modalPlanillaLabel">Vista previa</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center p-0">
+                <!-- Contenedor responsivo para el video de Vimeo -->
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://player.vimeo.com/video/1218790363?h=autopause=0&autoplay=1" 
+                            allow="autoplay; fullscreen; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="button button-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
